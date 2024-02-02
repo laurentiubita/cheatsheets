@@ -350,6 +350,8 @@ spec:
       
     
       
-    
+ //// TO DELETE
+eksctl delete nodegroup eksdemo1-ng-private1 --cluster eksdemo1 --drain=false
+eksctl delete cluster eksdemo1 --region us-east-1
       
     
