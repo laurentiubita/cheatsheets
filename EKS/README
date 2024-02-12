@@ -348,8 +348,14 @@ spec:
 # 1. If  "spec.ingressClassName: my-aws-ingress-class" not specified, will reference default ingress class on this kubernetes cluster
 # 2. Default Ingress class is nothing but for which ingress class we have the annotation `ingressclass.kubernetes.io/is-default-class: "true"`
       
-    
-      
+
+
+//
+// TO DEPLOY WITH HELM
+///
+helm upgrade demo-micronaut demo-micronaut/ --values demo-micronaut/values.yaml --install
+
+
  //// TO DELETE
 eksctl delete nodegroup eksdemo1-ng-private1 --cluster eksdemo1 --drain=false
 eksctl delete cluster eksdemo1 --region us-east-1
